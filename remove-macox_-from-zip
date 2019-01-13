@@ -1,0 +1,6 @@
+#!/bin/bash
+# removes all the nasty __MACOSX files from .zip archives so other programs e.g. pandas can consume it
+# can also replace `"__MACOSX*"` with other files etc you don't want
+for i in $( ls ); do
+  zip -d ${i} "__MACOSX*"
+done
